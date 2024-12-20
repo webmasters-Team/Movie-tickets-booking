@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webmasters small projects</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Ticket Booking</h1>
+
+        <!-- Movie Selection -->
+        <div class="step" id="step1">
+            <h2>Select a Movie</h2>
+            <select id="movieSelect">
+                <option value="movie1" data-price="10">Movie 1</option>
+                <option value="movie2" data-price="12">Movie 2</option>
+                <option value="movie3" data-price="15">Movie 3</option>
+            </select>
+            <button onclick="nextStep(1)">Next</button>
+        </div>
+
+        <!-- Theatre and Show Time Selection -->
+        <div class="step" id="step2" style="display:none;">
+            <h2>Select Theatre and Show Time</h2>
+            <select id="theatreSelect">
+                <option value="theatre1">Theatre 1</option>
+                <option value="theatre2">Theatre 2</option>
+                <option value="theatre3">Theatre 3</option>
+            </select>
+            <select id="showtimeSelect">
+                <option value="time1">10:00 AM</option>
+                <option value="time2">01:00 PM</option>
+                <option value="time3">04:00 PM</option>
+                <option value="time4">07:00 PM</option>
+            </select>
+            <button onclick="nextStep(2)">Next</button>
+        </div>
+
+        <!-- Seat Selection -->
+        <div class="step" id="step3" style="display:none;">
+            <h2>Select Seats</h2>
+            <div class="seat-layout">
+                <!-- Seat layout will be dynamically generated here -->
+            </div>
+            <div>
+                <p>Price: $<span id="totalPrice">0</span></p>
+            </div>
+            <button onclick="nextStep(3)">Next</button>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="step" id="step4" style="display:none;">
+            <h2>Payment Method</h2>
+            <select id="paymentMethod">
+                <option value="creditCard">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+            <button onclick="nextStep(4)">Next</button>
+        </div>
+
+        <!-- Digital Ticket -->
+        <div class="step" id="step5" style="display:none;">
+            <h2>Your Digital Ticket</h2>
+            <p id="ticketDetails"></p>
+            <button onclick="resetBooking()">Book Another Ticket</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+<script src="script.js"></script>    
+</body>
+</html>
